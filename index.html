@@ -6,29 +6,42 @@
     <meta name="author2" content="Althea Abilla">
     <meta name="author3" content="Mikay Leonida">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bake For A Cause :  Create Account</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Baking For A Cause!</title>
-    
 </head>
 <body>
-    <div class="forms">
-        <form id="login">
-            <fieldset form="login">BAKE MAK
-            <p>Welcome to M.A.K.</p>
-            <a href="#">Register</a>
+    <header>
+        <h1>Kneading in times of Need</h1>
+        <h3>Sign-up for BakeM.A.K.</h3>
+        <hr>
+    </header>
+    <form id="signup" onsubmit=" return signup()">
+        <aside id="bklogo"></aside>
+        <div class="name">
+            <label for="fname" class="name">First Name</label><br>
+            <input type="text" class="name" id="fname" name="fname" placeholder="e.g. Mary Kyla" oninput="checkFN()"><br><br>
+            <label for="mname" class="name">Middle Name</label><br>
+            <input type="text" class="name" name="mname" id="mname" placeholder="Binosa" oninput="checkMN()"><br><br>
+            <label for="lname" class="name">Last Name</label><br>
+            <input for="text" class="name" id="lname" name="lname" placeholder="Leonida" oninput="checkLN()"></input><br><br>
+        </div>
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" name="email" placeholder="marykylaleonida@domain.com" oninput="checkMail()" autocomplete="on"><br><br>
+        <label for="pword">Password</label><br>
+        <input type="password" id="pword" name="pword" placeholder="Use a strong password" oninput="checkPass()"><br><br>
 
-            <label for="username">Username: </label><br>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="pword">Password: </label><br>
-            <input type="password" id="pword" name="pword"><br><br>
-
-            <input type="submit" onclick="login()" value="Login">
-            <input type="button" onclick="signup()" value="Sign-Up">
-
-            </fieldset>
-        </form>
-    </div>
-    
+        <div class="info">
+            <label for="cnumber">Contact Number</label>
+            <input type="tel" name="cnumber" id="cnumber" placeholder="09** / Telephone Number" oninput="checkNum()">
+            <label for="sex">Sex</label>
+            <select name="sex" id="sex">
+                <option id="fem" value="fem" oninput="checkSex()">Female</option>
+                <option id="male" value="male" oninput="checkSex()">Male</option>
+                <option id="pnts" value="pnts" oninput="checkSex()">Prefer not to say</option>
+            </select>
+        </div>
+        <input type="button" value="Next">
+    </form>    
 </body>
 </html>
