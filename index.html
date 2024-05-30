@@ -16,26 +16,26 @@
         <h3>Sign-up for BakeM.A.K.</h3> <!--sign up message on top-->
         <hr>
     </header>
-    <form id="signup">
+    <form id="signup" onsubmit="return signup()">
         <aside id="bklogo"></aside><!--Logo in the Side-->
         <div class="name">
-            <label for="fname" class="name">First Name</label><span class="reqSymbol">*</span><br><!--Requires First name-->
+            <label for="fname" class="name">First Name</label><br><!--Requires First name-->
             <input type="text" class="name" id="fname" name="fname" placeholder="e.g. Mary Kyla" oninput="checkfn()">
             <span class="requiredInputs" id="fnreq"></span><br><br>
 
-            <label for="mname" class="name">Middle Name</label><span class="reqSymbol">*</span><br><!--Requires Middle name-->
+            <label for="mname" class="name">Middle Name</label><br><!--Requires Middle name-->
             <input type="text" class="name" name="mname" id="mname" placeholder="Binosa" oninput="checkmn()">
             <span class="requiredInputs" id="mnreq"></span><br><br>
 
-            <label for="lname" class="name">Last Name</label><span class="reqSymbol">*</span><br><!--Requires Last name-->
+            <label for="lname" class="name">Last Name</label><br><!--Requires Last name-->
             <input for="text" class="name" id="lname" name="lname" placeholder="Leonida" oninput="checkln()"></input>
             <span class="requiredInputs" id="lnreq"></span><br><br>
         </div>
-        <label for="email">Email Address</label><span class="reqSymbol">*</span><br><!--Requires email / mail -->
+        <label for="email">Email Address</label><br><!--Requires email / mail -->
         <input type="email" id="email" name="email" placeholder="marykylaleonida@domain.com" oninput="checkmail()" autocomplete="on">
         <span class="requiredInputs" id="mailreq"></span><br><br>
 
-        <label for="pword">Password</label><span class="reqSymbol">*</span><br><!--Requires Password-->
+        <label for="pword">Password</label><br><!--Requires Password-->
         <input type="password" id="pword" name="pword" placeholder="Use a strong password" oninput="checkpass()">
         <span class="requiredInputs" id="passreq"></span><br><br>
 
@@ -44,13 +44,13 @@
             <input type="tel" name="cnumber" id="cnumber" placeholder="09** / Telephone Number" oninput="checknum()">
 
             <div class="sx"><!--Sex of User-->
-                <label for="sex">Sex</label><span class="reqSymbol">*</span><br>
+                <label for="sex">Sex</label></span><br>
                 <input type="radio" id="fem" name="sex" value="Female" oninput="checksex()">
                 <label for="fem">Female</label></br>
                 <input type="radio" id="male" name="sex" value="Male" oninput="checksex()">
                 <label for="male">Male</label></br>
                 <input type="radio" id="pnts" name="sex" value="Prefer Not To Mention" oninput="checksex()">
-                <label for="pnts">Prefer Not To Mention</label>
+                <label for="pnts">Prefer Not To Mention</label><br>
             <span class="requiredInputs" id="sexreq"></span>
             </div>
         </div><br><br>
@@ -67,7 +67,7 @@
                 <label for="foundoc">How I found out about this campaign?</label><br><!--How they encountered and found out about the campaign/ get to know the user <33-->
                 <textarea name="foundoc" id="foundoc" cols="60" rows="3" placeholder="example: from my colleagues / on official instagram page"></textarea><br><br>
             </div>
-            <input type="submit" value="Register" id="register" onsubmit="return signup()"> <!--Submit-->
+            <input type="submit" value="Register" id="submit"> <!--Submit-->
         </div>
     </form>    
 </body>

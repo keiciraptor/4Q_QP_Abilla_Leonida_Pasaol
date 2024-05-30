@@ -1,6 +1,6 @@
 function signup()
 {
-    var ufn = document.getElementById("fname").value; //takes value and stores it in the variable
+    var ufn = document.getElementById("fname").value; //takes value from the input of the user and stores it in the variable
     var umn = document.getElementById("mname").value;
     var uln = document.getElementById("lname").value;
     var umail = document.getElementById("email").value;
@@ -14,31 +14,31 @@ function signup()
         {
             if (ufn == "")
                 {
-                    document.getElementById("fnreq").innerHTML = "REQUIRED" ;
+                    document.getElementById("fnreq").innerHTML = "*" ;
                 }
             if (umn == "")
                 {
-                    document.getElementById("mnreq").innerHTML = "REQUIRED";
+                    document.getElementById("mnreq").innerHTML = "*";
                 }
             if (uln == "")
                  {
-                    document.getElementById("lnreq").innerHTML = "REQUIRED";
+                    document.getElementById("lnreq").innerHTML = "*";
                  }        
             if (umail == "")
                 {
-                    document.getElementById("mailreq").innerHTML = "REQUIRED";
+                    document.getElementById("mailreq").innerHTML = "*";
                 }
             if(usupp == "")
                 {
-                    document.getElementById("suppreq").innerHTML = "REQUIRED";
+                    document.getElementById("suppreq").innerHTML = "*";
                 }
             if (usex == "")
                 {
-                    document.getElementById("sexreq").innerHTML = "REQUIRED"; 
+                    document.getElementById("sexreq").innerHTML = "*"; 
                 }
             if (upass == "")
                 {
-                    document.getElementById("passreq").innerHTML = "REQUIRED";
+                    document.getElementById("passreq").innerHTML = "*";
                 }
         }
         else //sets data for storing
@@ -50,8 +50,9 @@ function signup()
             localStorage.setItem("ssex", usex);
             localStorage.setItem("ssupp", usupp);
 
-            window.open("profile.html", "_self");
+            window.location.href = 'profile.html'; // Redirect to profile/dashboard page
         }
+    return false;
 }
 
 function display()
@@ -70,17 +71,20 @@ function display()
     document.getElementById("displaysex").innerHTML += usex; //Display Sex
     document.getElementById("displaysupp").innerHTML += usupp; //Display Reason for supporting campaign
 
-    return false; //
+    return false;
 }
 
 function sexC() //Takes the choice of the user
 {
+    
     var sex="";
     var sexC = document.getElementsByName("sex");
-    for (var ctr=0; ctr<sexC.length; ctr++){
-        if (sexC[ctr].checked){
+    for (var ctr=0; ctr<sexC.length; ctr++)
+        {
+        if (sexC[ctr].checked)
+            {
             sex += sexC[ctr].value;
-        }
+            }
     }
     return sex;
 }
