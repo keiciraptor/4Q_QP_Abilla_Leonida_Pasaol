@@ -53,8 +53,22 @@
                 <label for="pnts">Prefer Not To Mention</label>
             <span class="requiredInputs" id="sexreq"></span>
             </div>
+        </div><br><br>
+        <div id="campaign">
+            <h4>About Campaign:</h4><!--About the Campaign! Brief Description-->
+            <article>
+                The campaign advocates for the garnerning of funds through paid baking lessons and donations, that is then given to connected campaigns or collaborated campaigns that advocates for the wellness of those with chronic illnesses.
+            </article><br><br>
+            <div>
+                <label for="support">Why I support this campaign?</label><span class="reqSymbol">*</span><br>
+                <textarea name="support" id="support" cols="60" rows="5" placeholder="State why you want to support our campaign" onsubmit="checkSupport()"></textarea><br><br> <!--Why the user supports the campaign-->
+                <span class="requiredInputs" id="freq"></span>
+
+                <label for="foundoc">How I found out about this campaign?</label><br><!--How they encountered and found out about the campaign/ get to know the user <33-->
+                <textarea name="foundoc" id="foundoc" cols="60" rows="3" placeholder="example: from my colleagues / on official instagram page"></textarea><br><br>
+            </div>
+            <input type="submit" value="Register" id="register" onsubmit="return signup()"> <!--Submit-->
         </div>
-        <input type="submit" value="Next" onsubmit="return signup()"> <!--Next!-->
     </form>    
 </body>
 </html>
