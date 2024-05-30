@@ -12,45 +12,49 @@
 </head>
 <body>
     <header>
-        <h1>Kneading in times of Need</h1>
-        <h3>Sign-up for BakeM.A.K.</h3>
+        <h1>Kneading in times of Need</h1> <!--Tagline-->
+        <h3>Sign-up for BakeM.A.K.</h3> <!--sign up message on top-->
         <hr>
     </header>
-    <form id="signup" onsubmit=" return signup()">
-        <aside id="bklogo"></aside>
+    <form id="signup">
+        <aside id="bklogo"></aside><!--Logo in the Side-->
         <div class="name">
-            <label for="fname" class="name">First Name</label><br>
+            <label for="fname" class="name">First Name</label><span class="reqSymbol">*</span><br><!--Requires First name-->
             <input type="text" class="name" id="fname" name="fname" placeholder="e.g. Mary Kyla" oninput="checkfn()">
             <span class="requiredInputs" id="fnreq"></span><br><br>
 
-            <label for="mname" class="name">Middle Name</label><br>
+            <label for="mname" class="name">Middle Name</label><span class="reqSymbol">*</span><br><!--Requires Middle name-->
             <input type="text" class="name" name="mname" id="mname" placeholder="Binosa" oninput="checkmn()">
             <span class="requiredInputs" id="mnreq"></span><br><br>
 
-            <label for="lname" class="name">Last Name</label><br>
+            <label for="lname" class="name">Last Name</label><span class="reqSymbol">*</span><br><!--Requires Last name-->
             <input for="text" class="name" id="lname" name="lname" placeholder="Leonida" oninput="checkln()"></input>
             <span class="requiredInputs" id="lnreq"></span><br><br>
         </div>
-        <label for="email">Email Address</label><br>
+        <label for="email">Email Address</label><span class="reqSymbol">*</span><br><!--Requires email / mail -->
         <input type="email" id="email" name="email" placeholder="marykylaleonida@domain.com" oninput="checkmail()" autocomplete="on">
         <span class="requiredInputs" id="mailreq"></span><br><br>
 
-        <label for="pword">Password</label><br>
+        <label for="pword">Password</label><span class="reqSymbol">*</span><br><!--Requires Password-->
         <input type="password" id="pword" name="pword" placeholder="Use a strong password" oninput="checkpass()">
         <span class="requiredInputs" id="passreq"></span><br><br>
 
         <div class="info">
-            <label for="cnumber">Contact Number</label>
+            <label for="cnumber">Contact Number</label><!--RING RING CALL ME CALL ME RING RING, Contact Number of User-->
             <input type="tel" name="cnumber" id="cnumber" placeholder="09** / Telephone Number" oninput="checknum()">
-            <label for="sex">Sex</label>
-            <select name="sex" id="sex">
-                <option id="fem" value="fem" oninput="checksex()">Female</option>
-                <option id="male" value="male" oninput="checksex()">Male</option>
-                <option id="pnts" value="pnts" oninput="checksex()">Prefer not to say</option>
-            </select>
+
+            <div class="sx"><!--Sex of User-->
+                <label for="sex">Sex</label><span class="reqSymbol">*</span><br>
+                <input type="radio" id="fem" name="sex" value="Female" oninput="checksex()">
+                <label for="fem">Female</label></br>
+                <input type="radio" id="male" name="sex" value="Male" oninput="checksex()">
+                <label for="male">Male</label></br>
+                <input type="radio" id="pnts" name="sex" value="Prefer Not To Mention" oninput="checksex()">
+                <label for="pnts">Prefer Not To Mention</label>
             <span class="requiredInputs" id="sexreq"></span>
+            </div>
         </div>
-        <input type="submit" value="Next">
+        <input type="submit" value="Next" onsubmit="return signup()"> <!--Next!-->
     </form>    
 </body>
 </html>
