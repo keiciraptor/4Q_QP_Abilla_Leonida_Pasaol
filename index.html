@@ -7,7 +7,6 @@
     <meta name="author3" content="Mikay Leonida">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bake For A Cause :  Create Account</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,18 +30,18 @@
             <input for="text" class="name" id="lname" name="lname" placeholder="Leonida" oninput="checkln()"></input>
             <span class="requiredInputs" id="lnreq"></span><br><br>
         </div>
-        <label for="email">Email Address</label><br><!--Requires email / mail -->
+        <label id="emaillabel" for="email">Email Address</label><br><!--Requires email / mail -->
         <input type="email" id="email" name="email" placeholder="marykylaleonida@domain.com" oninput="checkmail()" autocomplete="on">
         <span class="requiredInputs" id="mailreq"></span><br><br>
 
-        <label for="pword">Password</label><br><!--Requires Password-->
+        <label id="pwordlabel" for="pword">Password</label><br><!--Requires Password-->
         <input type="password" id="pword" name="pword" placeholder="Use a strong password" oninput="checkpass()">
         <span class="requiredInputs" id="passreq"></span><br><br>
 
         <div class="info">
-            <label for="cnumber">Contact Number</label><!--RING RING CALL ME CALL ME RING RING, Contact Number of User-->
+            <label id="cnumberlabel" for="cnumber">Contact Number</label><br><!--RING RING CALL ME CALL ME RING RING, Contact Number of User-->
             <input type="tel" name="cnumber" id="cnumber" placeholder="09** / Telephone Number" oninput="checknum()">
-
+            <br><br>
             <div class="sx"><!--Sex of User-->
                 <label for="sex">Sex</label></span><br>
                 <input type="radio" id="fem" name="sex" value="Female" oninput="checksex()">
@@ -55,20 +54,22 @@
             </div>
         </div><br><br>
         <div id="campaign">
-            <h4>About Campaign:</h4><!--About the Campaign! Brief Description-->
-            <article>
+            <h4 id="articlelabel">About Campaign:</h4><!--About the Campaign! Brief Description-->
+            <article id="article">
                 The campaign advocates for the garnerning of funds through paid baking lessons and donations, that is then given to connected campaigns or collaborated campaigns that advocates for the wellness of those with chronic illnesses.
             </article><br><br>
             <div>
-                <label for="support">Why I support this campaign?</label><span class="reqSymbol">*</span><br>
+                <label id="supportlabel" for="support">Why I support this campaign?</label><span class="reqSymbol">*</span><br>
                 <textarea name="support" id="support" cols="60" rows="5" placeholder="State why you want to support our campaign" onsubmit="checkSupport()"></textarea><br><br> <!--Why the user supports the campaign-->
                 <span class="requiredInputs" id="freq"></span>
 
-                <label for="foundoc">How I found out about this campaign?</label><br><!--How they encountered and found out about the campaign/ get to know the user <33-->
+                <label id="foundoclabel" for="foundoc">How I found out about this campaign?</label><br><!--How they encountered and found out about the campaign/ get to know the user <33-->
                 <textarea name="foundoc" id="foundoc" cols="60" rows="3" placeholder="example: from my colleagues / on official instagram page"></textarea><br><br>
             </div>
             <input type="submit" value="Register" id="submit"> <!--Submit-->
         </div>
     </form>    
+
+    <script src="script.js"></script>
 </body>
 </html>
