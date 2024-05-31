@@ -1,16 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-     
 }
-
-body {
-    background-image: url("/imgs/csbgg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 aside#bklogo {
     background: url('/imgs/cslogo.png') no-repeat center center;
     background-size: contain;
@@ -27,13 +18,13 @@ aside{
 }
 
 h1 {
-    color: #8B4513; 
+    color: #EDE1D7; 
     text-align: center;
     margin-right: 50%;
 }
 
 h3 {
-    color: #A0522D; 
+    color: #EDE1D7; 
     text-align: center;
     margin-right: 50%;
 }
@@ -170,7 +161,7 @@ input[type="submit"] {
 }
 
 #displaymail{
-    margin-left: 23vw;
+    margin-left: 20vw;
 }
 
 #displaysex{
